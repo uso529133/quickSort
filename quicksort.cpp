@@ -9,6 +9,16 @@ void quickSort(vector<T> &A, int begin, int end) {
 
     vector<T> B, C;
 
+	if (end - begin > 3) {
+		if (A[begin] < A[end] && A[begin] < A[begin + 1]) {
+			if (A[begin + 1] < A[end]) swap(A[begin], A[begin + 1]);
+			else swap(A[begin], A[end]);
+		} else if (A[begin] > A[end] && A[begin] > A[begin + 1]) {
+			if (A[begin + 1] > A[end]) swap(A[begin], A[end]);
+			else swap(A[begin], A[begin + 1]);
+		}
+	}
+
     for (size_t i = begin + 1; i <= end; ++i) {
         if (A[i] < A[begin]) {
             B.push_back(A[i]);
