@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 #include <chrono>
-#include "quicksort.cpp"
+#include "quickSort.cpp"
 
 using namespace std;
 int main() {
